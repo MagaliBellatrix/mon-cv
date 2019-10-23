@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html class="sr" lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,18 +13,16 @@
 		<link rel="icon" sizes="96x96" href="assets/img/favicon-96.png" type="image/png">
 		<title>Magali Bachergian</title>
 		<div class="fleche">
-    	<!--a href="#"><i class="medium black material-icons">expand_less</i></a-->
+    	<a href="#"><i class="medium black material-icons">expand_less</i></a>
     </div>
 </head>
 	<header>
 		<nav>
-				<div class="box">
-					<h1>Magali Bachergian</h1>
+				<h1>Magali Bachergian</h1>
 						<div class="dev">
 							<h2>Développeuse Web Fullstack Junior</h2>
 						</div>
 						<menu>
-
 						<div class="entete hamburger">
                             <i class="material-icons menuHamb">menu</i>
                             <ul class="menuNav">
@@ -35,7 +33,6 @@
 				</ul>
 				</div>
 		</menu>
-			</div>
 		</nav>
 	</header>
 <body>
