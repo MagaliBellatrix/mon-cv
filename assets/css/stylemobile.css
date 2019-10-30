@@ -22,29 +22,31 @@ html, body {
   @media screen and (min-width: 670px){
 /** HEADER **/
 
-nav {
-    display: block;
-    overflow: hidden;
+.entete.desktop {
     top:0;
     position: fixed;
-    z-index: 3;
+    z-index: 100;
     background-color: #563440;
-    height:35vh;
+    height:auto;
     width:100%;
     margin: 0;
     behavior: smooth;
-    transition: 1.1s;}
+    border-bottom: solid 1px rgb(51, 51, 51);}
     
     .navbar-shrink {
+      display: flex;
+      justify-content: center;
+      align-content: center;
       top:0;
       position: fixed;
-      z-index: 3;
+      z-index: 100;
       background-color: rgba(86, 52, 64, 0.9);
-      opacity: 1.1;
-      height: 10vh;
-      transition: 1s;
+      opacity: 0.85;
+      height: 8vh;
+      transition: 0.8s;
       width:100%;
       margin: 0;
+      padding: 0;
       behavior: smooth;}
     
       .navbar-shrink h1 {
@@ -54,19 +56,23 @@ nav {
       .navbar-shrink h2 {
         display: none;
       }
-    
+
+      .navbar-shrink menu {
+      line-height: 0;
+      }
+
     header h1 {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      z-index: 3;
+      z-index: 100;
       width: 100%;
       font-family: 'Poiret One', cursive;
       text-transform: uppercase;
-      font-size: 40px;
+      font-size: 45px;
       text-align: center;
       letter-spacing: 11px;
-      line-height: 40px;
+      line-height: 30px;
+      padding-top: 3px;
       font-weight: 900;
       color: white;}
     
@@ -83,55 +89,55 @@ nav {
     }**/
 
      
-   menu {
-    display: block;
-    line-height: 10px;
-    z-index: 4;
+   .entete.desktop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    z-index: 100;
     font-family: 'Poiret One', cursive;
     letter-spacing: 3px;
-    font-size: 23px;
-    padding:0;
-    color: white;
+    padding: 0;
     }
     
-    menu ul {
-    display: flex;
-    flex: wrap;
-    flex-direction: row;
-    align-content: center;
+    .entete.desktop ul {
+      width: 100%;
+      display: flex;
+      color: white;
+    font-size: 28px;
     justify-content: center;
+    align-content: center;
+    z-index: 10;
     list-style-type: none;
     margin:0;
-    padding:0;}
+    padding: 0;}
     
-   menu li {
-    display: inline-block;
-    padding: 15px;
+    .entete.desktop li {
+      display: flex;
+      flex-direction: row;
+    z-index: 10;
+    padding: 30px;
+    color: white;
+    text-decoration: none;
     }
     
-    menu li a:link {
+    .entete.desktop li a:link {
         color: white;
         text-decoration: none;}
     
-    menu li a:visited {
+        .entete.desktop li a:visited {
         color:white;}
     
-     menu li a:hover {
+        .entete.desktop li a:hover {
       color: #C9C9C9;}
     
-      menu li a:active {
+      .entete.desktop li a:active {
         color:#EEE5E9;}
     
     
         /* HAMBURGER */
-    
-      .material-icons.md-18.arrow-back { 
-          display: none;
-      }
 
-      .material-icons.menuHamb {
-        display: none;
-      }
+        .entete.hamburger{
+          display: none;}
     
         /** H1 À H6 **/
     
@@ -141,23 +147,24 @@ nav {
       justify-content: center;
         font-family: 'Poiret One', cursive;
         text-transform: uppercase;
-        font-size: 25px;
+        font-size: 30px;
         text-align: center;
         color: white;
         letter-spacing: 8px;
         font-weight: 900;
+        padding-bottom: 20px;
         line-height: 10px;}
     
         h3 {
           font-family: 'Poiret One', cursive;
           text-transform: uppercase;
-          font-size: 30px;
+          font-size: 35px;
           text-align: center;
           color:#563440;
           letter-spacing: 8px;
           font-weight: 900;
           padding: 15px;
-          line-height: 10px;}
+          line-height: 30px;}
     
         /** SECTION **/
     
@@ -174,26 +181,33 @@ nav {
     padding: 0;}
     
       .accueil {
-        top:45vh;
-        right: 44px;
-        position: absolute;
         color: #563440;
-        width: 550px;
-        line-height: 50px;
-        font-size: 18px;
+        top:33vh;
+        position: absolute;
+        width: 100%;
+        line-height: 40px;
+        font-size: 28px;
+        box-sizing: border-box;
         list-style-type: none;
-        text-align: left;
+        margin: 0 auto;
       }
+
+      .accueil ul {
+        text-align: center; 
+        line-height: 120px;
+        width: 60%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+      padding-top: 8vh;}
     
       .accueil li {
         list-style-type: none;
-        text-align: left;
         padding-bottom: 20px;
       }
     
       .competences ul {
       display:flex;
-      flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -203,13 +217,13 @@ nav {
       }
     
       .section-accueil {
-        height: 125vh;
+        height: 110vh;
         background-image: url(../img/accueil.jpg);
         background-size : cover;
         background-repeat: no-repeat;}
     
       .section-contact {
-      padding-top: 50px;
+      margin-top: 70px;
       display:flex;
       flex-wrap: wrap;
       flex-direction: column;
@@ -227,7 +241,8 @@ nav {
       }
     
       .section-competences {
-      height: 35vh;
+      padding-top: 25px;
+      height: 40vh;
       }
     
     
@@ -235,9 +250,11 @@ nav {
       border: 1px solid #F19C79;**/
     
     form {
+      justify-content: center;
+      align-content:center;
       margin: 0 auto;
-      width: 700px;
-      padding: 20px;
+      width: 800px;
+      padding: 50px;
       background-color: #C9C9C9;
       border-radius: 1em;
       text-align: center;
@@ -245,13 +262,14 @@ nav {
     
         input, textarea {
           font-family: 'Poiret One', cursive;
-          width: 500px;
-          font-size: 17px;
+          width: 700px;
+          padding: 15px;
+          font-size: 20px;
           box-sizing: border-box;
           border: 1px solid white;
           border-radius: 1em;
           text-align: center;
-          margin : 5px;
+          margin : 15px;
         }
     
       button {
@@ -259,11 +277,11 @@ nav {
         line-height: 15px;
         font-family: 'Poiret One', cursive;
         margin-top: 8px;
-        width: 350px;
-        font-size: 13px;
+        width: 400px;
+        font-size: 16px;
         background-color: #563440;
         color: white;
-        padding: 6px;
+        padding: 15px;
         border-radius: 15px;
         transition: 0.4s;
       }
@@ -273,11 +291,11 @@ nav {
         line-height: 15px;
         font-family: 'Poiret One', cursive;
         margin-top: 8px;
-      width: 350px;
-        font-size: 13px;
+      width: 400px;
+        font-size: 16px;
         background-color: #563440;
         color: white;
-        padding: 6px;
+        padding: 15px;
         box-shadow: 2px 2px grey;
         border-radius: 15px;  }
         
@@ -288,7 +306,7 @@ nav {
     
       textarea {
         vertical-align: top;
-        line-height: 20px;
+        line-height: 30px;
       }
       /** IMAGES**/
     
@@ -300,12 +318,12 @@ nav {
     
             .two img {
             display: inline-block;
-            width : 15%;
-            padding: 8px;
+            width : 18%;
+            padding: 10px;
             }
             
               .competences img {
-              width: 45%;
+              width: 55%;
               }
     
               .section-galerie img {
@@ -320,23 +338,21 @@ nav {
     
     /*FLÈCHE*/
 
-    .fleche{
-        animation: down 0.6s infinite linear alternate;
-          width: 10%;
-          color: black;
-          display: block;
-          margin: auto;}
-    
-          #toTop { 
-            bottom: 60px; 
-            right: 10px;}
-    
-      @keyframes down{
-        0% {position:relative; top:0px; opacity: 0}
-        50% {position:relative; top:9px; opacity: 0.5}
-        100% {position:relative; top:18px; opacity: 1}
-      }
-      
+  
+    .fleche a {
+      color: white;
+      animation: down 0.6s infinite linear alternate;
+      margin: 0 auto;     
+      width: 100%;
+    } 
+
+
+    @keyframes down{
+      0% {position:relative; bottom:45px; opacity: 0.1}
+	    20% {position:relative; bottom:52px; opacity: 0.3}
+	    50% {position:relative; bottom:57px; opacity: 0.5}
+	    100% {position:relative; bottom:62px; opacity: 1}
+    }
     
      /** FOOTER **/
     
@@ -345,15 +361,14 @@ nav {
     overflow: hidden;
     background-color : #563440;
     font-family: 'Poiret One', cursive;
-    font-size: 16px;
+    font-size: 26px;
     text-align: center;
     color: white;
     bottom: 0;
-    height: auto;
-    padding-top: 3px;
-    padding-bottom: 3px;
+    height: 28vh;
     width: 100%;
     letter-spacing: 3px;
+    line-height: 58px;
     }
     
     .one, .two, .three {
@@ -361,7 +376,7 @@ nav {
       text-decoration: none;
       justify-content: center;
       align-content: center;
-      padding: 0;
+      padding-top: 15px;
     }
     
     footer ul {
@@ -397,12 +412,23 @@ nav {
         .three {
         text-transform: uppercase;
         }
+
+        .one {
+        text-align: left;
+        padding-left: 80px;
+        }
+      
+        .one li {
+          align-content: center;
+          justify-content: center;
+          vertical-align: center;
+        }
     
     /* BOUTON FOOTER */
     
     .cv {
       display: inline-block;
-      padding: 10px 10px;
+      padding: 15px 15px;
       font-size: 24px;
       cursor: pointer;
       text-align: center;
@@ -411,7 +437,7 @@ nav {
       border: none;
       box-shadow: 4px 4px rgb(146, 143, 143);
       border-radius: 15px;
-      width: 180px;
+      width: 200px;
       transition: 0.4s;
     }
     
@@ -421,84 +447,106 @@ nav {
       cursor: pointer;}
     
     .cv:hover {
-    box-shadow: 2px 2px rgb(146, 143, 143);
+    box-shadow: 2px 3px rgb(146, 143, 143);
     background-color: white;
     color: #563440;
     border-radius: 15px;
-    padding: 10px 10px;
+    padding: 13px 13px;
     font-size: 24px;
     width: 180px;
     cursor: pointer;
     }}
 
+
+
+
 /*MEDIA QUERIES*/
 
 
-@media screen and (min-width: 370px) and (max-width: 670px){
-  /** HEADER 
+@media screen and (min-width: 300px) and (max-width: 800px){
+  /** HEADER */
 
-nav {
-    display: flex;
-    overflow: hidden;
-    top:0;
-    padding: 0px 18px;
-    position: fixed;
-    z-index: 3;
-    background-color: #563440;
-    height:auto;
-    width:100%;
-    margin: 0;
-    behavior: smooth;
-    transition: 1s;}**/
 
-    nav{
+  
+
+ nav {
         position: absolute;
         top: 0;  
         margin: 0;
         width: 100%;
+        z-index: 10;
         background-color: #563440;
+        height: auto;
+        color: white;
+        padding: 5px;
     }
 
-    .entete{
-        width: 100%;
+ .entete.desktop {
+  display: none;}
+
+    .entete.hamburger {
         display: flex;
         justify-content: center;
-        align-items: center;  
-    }
-    .entete.desktop{
-        display: none;
+        align-items: center; 
+    border-bottom: solid 1px 1px rgba(116, 115, 115, 0.7);
+    padding-bottom: 5px;}
+
+nav.desktop {
+  display: none;
+}
+
+    .menuHamb:hover{
+      cursor: pointer;
+  }
+  
+   .navigate_before { 
+        color: white;
+        position: absolute;
+        left: 20px;
+        top: 50px;
+        z-index: 10;
     }
   
+   
     .menuNav{
-        width: 100%;
-        height: 30vh;
-        margin: 20px auto;
-        padding:10px;
-        text-align: center;
-        background-color: #563440;
-        z-index: 3;
-        list-style: none;
-        position: absolute;
-        top: -20px;
-        left: 0;
-        text-decoration: none;
+      font-size: 20px;
+      width: 100%;
+      height: 100%;
+      opacity: 0.9;
+      padding:40px;
+      text-align: center;
+      background-color: #563440;
+      z-index: 3;
+      color: white;
+      list-style: none;
+      position: absolute;
+      top: -20px;
+      left: 0;}
+
+    .menuNav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
     }
+
+    .menuNav a {
+      color: white;
+text-decoration: none;
+line-height: 40px;
+cursor: pointer;
+    }
+
+    menu {
+    padding: 5px;
+    }
+
+
     /*.menuNav li{
         padding: 30px;
     }*/
 
-    .menuHamb {
-    margin: 0 auto;}
 
-    .menuHamb:hover{
-        cursor: pointer;
-    }
-    .material-icons.md-18.arrow-back { 
-        color: white;
-        position: absolute;
-        left: 15px;
-        top: 3px;
-    }
     
     header h1 {
     display: flex;
@@ -515,7 +563,7 @@ nav {
     padding-top: 10px;}
 
      h2 {
-     display: flex;
+       z-index: 200;
       width: 100%;
       font-family: 'Poiret One', cursive;
       text-transform: uppercase;
@@ -526,10 +574,10 @@ nav {
       color: white;}
 
 
-      /** MENU **/
+      /** MENU 
 
-  menu ul {
-  display: contents;
+ nav {
+  z-index: 2;
   display: flex;
   flex: wrap;
   flex-direction: column;
@@ -538,38 +586,37 @@ nav {
   list-style-type: none;
   margin:0;
   padding:0;}
+
+  .entete.hamburger menu {
+    line-height: 20px;
+    font-family: 'Poiret One', cursive;
+    letter-spacing: 3px;
+    font-size: 22px;
+    padding:0;
+    }
+
   
-  menu li {
+  .entete.hamburger menu li {
   padding: 8px;
   }
   
-  menu {
-  line-height: 16px;
-  z-index: 100;
-  font-family: 'Poiret One', cursive;
-  letter-spacing: 3px;
-  font-size: 22px;
-  padding:0;
-  }
   
-  menu li a:link {
+  
+  .entete.hamburger menu li a:link {
       color: white;
       text-decoration: none;}
   
-      menu li a:visited {
+      .entete.hamburger menu li a:visited {
       color:white;}
   
-      menu li a:hover {
+      .entete.hamburger menu li a:hover {
     color: #C9C9C9;}
   
-    menu li a:active {
+   .entete.hamburger menu li a:active {
       color:#EEE5E9;}
 
-    .menuNav:hover {
-            cursor: pointer;
-        }
 
-        .material-icons.md-18.arrow-back { 
+        .material-icons.md-18.navigate_before { 
             color: white;
             position: absolute;
             left: 20px;
@@ -577,28 +624,32 @@ nav {
         }
 
     .material-icons.menuHamb {
+      display: block;
         color: white;
+        margin: 0 auto;
     }
+
+
 
 /*SECTIONS*/
 
 section {
-    height: auto;
     width: 100%;
     font-family: 'Poiret One', cursive;
     text-align: center;
     color: #563440;
-    margin: 0;
-    padding: 0;}
+    margin: 0;}
 
   
   /* ACCUEIL */
 
 
   .section-accueil {
-    height: 35vh;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 10px;
     margin: 0 auto;
-    margin-top:30vh;
+    margin-top:34vh;
     background-image: url(../img/accueil.jpg);
     background-size : cover;
     background-repeat: no-repeat;
@@ -652,6 +703,12 @@ h3 {
     padding: 0;
     }
 
+    .section-competences {
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
 /** FOOTER **/
 
 footer {
@@ -659,7 +716,6 @@ footer {
     background-color : #563440;
     font-family: 'Poiret One', cursive;
     font-size: 10px;
-    text-align: center;
     color: white;
     bottom: 0;
     height: auto;
@@ -667,14 +723,15 @@ footer {
     padding-bottom: 3px;
     width: 100%;
     letter-spacing: 3px;
+    line-height: 10px;
     }
     
-    .one, .two, .three {
+    .one, .two {
       width: calc(100% / 2);
       text-decoration: none;
       justify-content: center;
       align-content: center;
-      padding: 8px;
+      padding: 4px;
     }
     
     footer ul {
@@ -690,7 +747,15 @@ footer {
 
     .one {
     padding-left: 20px;
-    }
+    text-align: left;
+    width: 60%;
+      }
+    
+      .one li {
+        align-content: center;
+        justify-content: center;
+        vertical-align: center;
+      }
     
     .one a:link {
       color: white;
@@ -717,23 +782,28 @@ footer {
 
         .two img {
             display: inline-block;
-            width : 25%;
+            width : 27%;
             padding: 4px;
             }
+
+        .two {
+        width: 40%;
+        padding-right: 5px;
+        }
 
 
 
 /* RÉALISATIONS */
 
 .section-galerie img {
-    margin-top: 21vh;
+  z-index: 0;
     width: calc(100% / 4);
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: center;
-    height: 75vh;
+    height: 100%;
     object-fit: cover;}
 
     .section-galerie { 
@@ -746,15 +816,12 @@ footer {
 
       /**FLÈCHE TO TOP */
 
-  .fleche{
-  display: none;
-  }
 
 /* FORMULAIRE*/
 
 .section-contact {
-height: 60vh;
-margin-top: 25vh;
+  height: 100%;
+  margin-top: 45vh;
 }
 
 form {
@@ -815,4 +882,10 @@ form {
     textarea {
       vertical-align: top;
       line-height: 20px;
+    }
+
+    /* FLECHE */
+
+    .fleche {
+    display: none;
     }}

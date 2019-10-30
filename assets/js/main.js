@@ -3,50 +3,26 @@ console.log("JS chargé");
 
 /* MENU QUI SE RÉDUIT*/ 
 $(window).scroll(function() {
-  if ($(document).scrollTop() > 40) {
-    $('nav').addClass('navbar-shrink');
+  if ($(document).scrollTop() > 50) {
+    $('.entete.desktop').addClass('navbar-shrink');
     $('.add').hide();
   } else {
-    $('nav').removeClass('navbar-shrink');
+    $('.entete.desktop').removeClass('navbar-shrink');
     $('.add').show(); }});
 
-
-/* BOUTON FLÈCHE */
-
-//NAVBAR+TOTOP
-window.onscroll = function () { scrollFunction() };
-var mybutton = document.querySelector(".fleche");
-
-function scrollFunction() {
-  if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-      $(mybutton).fadeIn(600);
-  } else {
-      $(mybutton).fadeOut(200)
-  }
-};
-
-mybutton.addEventListener('click', function topFunction() {
-  $("html, body").animate({ scrollTop: 0 }, 900);
-});
-
-/* SMOOTH SCROLL */
-
-$('a[href*=\\#]').on('click', function (event) {
-  event.preventDefault();
-  $('html,body').animate({scrollTop: $(this.hash).offset().top}, 500);
-});
 
 /* SCROLL REVEAL */
 
 const sr = ScrollReveal ();
 
-ScrollReveal().reveal('.dev', {
-    duration: 1700,
+
+ScrollReveal().reveal('h2', {
+    reset: true,
+    duration: 1800,
     rotate: {
         x: 180,
         z: 0,
-        duration: 2000,
-        delay : 1000,
+        delay : 1200
     }
 });
 
@@ -54,22 +30,23 @@ ScrollReveal().reveal('.dev', {
 sr.reveal('.accueil .pair',{ 
 origin : 'left',
 distance :'500px',
-duration : 800,
-delay: 800 });
+duration : 1000,
+delay: 800});
 
 sr.reveal('.accueil .impair',{ 
     origin : 'right',
-    distance :'50px',
-    duration : 800,
-    delay: 1200 });
+    distance :'500px',
+    duration : 1000,
+    delay: 1200});
 
     ScrollReveal().reveal('.competences li', {
         duration: 1500,
         rotate: {
             x: 0,
             z: 180,
-            duration: 2000,
+            duration: 2500,
             delay : 2000,
+            reset: true
         }
     });
 
@@ -160,15 +137,17 @@ sr.reveal('.photo1',{
                     });
                 })
 
-      // MENU HAMBURGER 
-      $(document).ready(function () {
-        $(".menuNav").hide();
-        $(function () {
-            $(".menuHamb").on("click", function () {
-                $(".menuNav").toggle(200);
-            })
-            $(".arrow-back").on('click', function () {
-                $(".menuNav").toggle(200);
-            })
+
+
+//MENU HAMBURGER
+$(document).ready(function () {
+    $(".menuNav").hide();
+    $(function () {
+        $(".menuHamb").on("click", function () {
+            $(".menuNav").toggle(200);
+        })
+        $(".navigate_before").on('click', function () {
+            $(".menuNav").toggle(200);
         })
     })
+})

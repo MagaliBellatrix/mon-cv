@@ -16,4 +16,3 @@ insererLigneTable("contact", [
 // message de confirmation pour l'utilisateur
 $confirmation = "Votre message est bien envoye";
 
-$tabAssoJson["test"] =  "HELLO";
